@@ -3,7 +3,7 @@ import Logo from "../assets/images/logo.png";
 import styled from "@emotion/styled";
 import { colors } from "../styles/colors";
 import Button from "../components/Button/button";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ContainerHeader = styled.div`
   background-color: ${colors.white};
@@ -23,6 +23,19 @@ const ContainerLogo = styled.div`
 const ContainerLinks = styled.div`
   display: flex;
   justify-content: space-around;
+  a {
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: black;
+    width: 8.375rem;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+
+  .active {
+    border-bottom: 2px solid ${colors.pallette.orange};
+  }
 `;
 
 const StyledForm = styled.form`
@@ -37,6 +50,10 @@ const ContainerForm = styled.div`
   padding: 3rem;
 `;
 
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
+
 function SignUpPage() {
   return (
     <div>
@@ -45,8 +62,18 @@ function SignUpPage() {
           <img src={Logo} />
         </ContainerLogo>
         <ContainerLinks>
-          <a href="#">Login</a>
-          <a href="#">Signup</a>
+          <StyledNavLink
+            to="/login"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Login
+          </StyledNavLink>
+          <StyledNavLink
+            to="/signup"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Signup
+          </StyledNavLink>
         </ContainerLinks>
       </ContainerHeader>
       <ContainerForm>
@@ -57,8 +84,8 @@ function SignUpPage() {
               placeholder={"user@mail.com"}
               name={"email"}
             ></Input>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <Input
               label={"Password"}
               placeholder={"******"}
