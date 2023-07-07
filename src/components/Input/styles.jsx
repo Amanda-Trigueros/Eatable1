@@ -1,19 +1,21 @@
 import styled from "@emotion/styled";
-import { typography } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 
-export const Container = styled.div`
+export const StyledInput = styled("input")`
+  background-color: ${colors.pallette.lightGray};
+  border: none;
+  border-bottom: 1px solid ${colors.pallette.black};
+  display: block;
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
   width: 100%;
-`;
-
-export const StyledInput = styled.input`
-  padding: 8px 12px;
-  border: 1px solid ${colors.gray[200]};
-  border-radius: 6px;
-  width: 100%;
+  ::placeholder {
+    opacity: 0.5;
+  }
 `;
 
 export const StyledLabel = styled.label`
-  ${typography.text.xs};
-  text-transform: uppercase;
+  color: ${colors.pallette.gray};
+  font-weight: 600;
+  font-size: 0.875rem;
 `;

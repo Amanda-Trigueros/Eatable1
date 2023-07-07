@@ -1,10 +1,17 @@
+import styled from "@emotion/styled";
+import LoginPage from "./pages/login-page";
+
+const Container = styled.div`
+  max-width: 1024px;
+  margin: auto;
+`;
+
 function App() {
-  
   return (
-    <>
-      <h1>Hola Kevin</h1>
-    </>
-  )
+    <Container>
+      <LoginPage />
+    </Container>
+  );
 }
 
-export default App
+export default App;
