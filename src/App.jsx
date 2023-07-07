@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import LoginPage from "./pages/login-page";
+import UnauthenticatedApp from "./UnauthenticatedApp";
 
 const Container = styled.div`
   max-width: 1024px;
@@ -9,7 +9,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <LoginPage />
+      <UnauthenticatedApp />
     </Container>
   );
 }

@@ -37,7 +37,7 @@ const ContainerForm = styled.div`
   padding: 3rem;
 `;
 
-function LoginPage() {
+function SignUpPage() {
   return (
     <div>
       <ContainerHeader>
@@ -66,7 +66,7 @@ function LoginPage() {
             ></Input>
           </div>
           <Button type={"primary"} isFullWidth>
-            Login
+            Sign-up
           </Button>
         </StyledForm>
       </ContainerForm>
@@ -74,4 +74,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default SignUpPage;
