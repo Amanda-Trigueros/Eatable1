@@ -55,6 +55,13 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function SignUpPage() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    const { email, password } = e.target.elements;
+    const credentials = { email: email.value, password: password.value };
+    console.log(credentials);
+  }
+
   return (
     <div>
       <ContainerHeader>
@@ -77,7 +84,7 @@ function SignUpPage() {
         </ContainerLinks>
       </ContainerHeader>
       <ContainerForm>
-        <StyledForm>
+        <StyledForm onSubmit={handleSubmit}>
           <div>
             <Input
               label={"Email adress"}
@@ -87,6 +94,7 @@ function SignUpPage() {
             <br />
             <br />
             <Input
+              type={"password"}
               label={"Password"}
               placeholder={"******"}
               name={"password"}
