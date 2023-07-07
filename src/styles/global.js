@@ -87,5 +87,6 @@ export const global = css`
   body {
     font-family: ${fonts.primary};
     color: ${colors.gray[900]};
+    background-color: ${colors.pallette.lightGray}
   }
 `;

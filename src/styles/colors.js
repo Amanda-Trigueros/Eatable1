@@ -1,4 +1,22 @@
 export const colors = {
+  pallette: {
+    black: "#333333",
+    gray: "#B8B8BB",
+    lightGray: "#F6F6F9",
+    orange: "#FA4A0C",
+  },
+  orange: {
+    50: "#fff7ed",
+    100: "#ffedd5",
+    200: "#fed7aa",
+    300: "#fdba74",
+    400: "#fb923c",
+    500: "#f97316",
+    600: "#ea580c",
+    700: "#c2410c",
+    800: "#9a3412",
+    900: "#7c2d12",
+  },
   gray: {
     50: "#F9FAFB",
     100: "#F3F4F6",
@@ -70,9 +88,6 @@ export const colors = {
     700: "#047857",
     800: "#065F46",
     900: "#064E3B",
-  },
-  orange: {
-    500: "#F97316",
   },
   teal: {
     500: "#14B8A6",
