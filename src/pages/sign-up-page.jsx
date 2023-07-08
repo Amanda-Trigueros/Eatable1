@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { colors } from "../styles/colors";
 import Button from "../components/Button/button";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../context/auth-context";
 
 const ContainerHeader = styled.div`
   background-color: ${colors.white};
@@ -55,11 +56,13 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function SignUpPage() {
+  const { signup } = useAuth()
+
   function handleSubmit(e) {
     e.preventDefault();
     const { email, password } = e.target.elements;
     const credentials = { email: email.value, password: password.value };
-    console.log(credentials);
+    signup(credentials);
   }
 
   return (
